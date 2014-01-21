@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DiningHallViewController.h"
 
-@interface MenuViewController : UITableViewController
+@interface MenuViewController : DiningHallViewController
+
+@property (strong, nonatomic) IBOutlet UILabel *hall;
+@property (nonatomic, assign) int hallNumber;
+
 
 @end

@@ -21,6 +21,9 @@
 		27C602A5188770BA001DFE60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C60287188770B9001DFE60 /* UIKit.framework */; };
 		27C602AD188770BA001DFE60 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27C602AB188770BA001DFE60 /* InfoPlist.strings */; };
 		27C602AF188770BA001DFE60 /* CUDiningViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C602AE188770BA001DFE60 /* CUDiningViewTests.m */; };
+		27C602BA1887738A001DFE60 /* DiningHallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C602B91887738A001DFE60 /* DiningHallViewController.m */; };
+		27C602BD1887A50B001DFE60 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C602BC1887A50B001DFE60 /* MenuViewController.m */; };
+		27C602C01888B543001DFE60 /* NutritionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C602BF1888B543001DFE60 /* NutritionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,12 @@
 		27C602AA188770BA001DFE60 /* CUDiningViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CUDiningViewTests-Info.plist"; sourceTree = "<group>"; };
 		27C602AC188770BA001DFE60 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		27C602AE188770BA001DFE60 /* CUDiningViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CUDiningViewTests.m; sourceTree = "<group>"; };
+		27C602B81887738A001DFE60 /* DiningHallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiningHallViewController.h; sourceTree = "<group>"; };
+		27C602B91887738A001DFE60 /* DiningHallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiningHallViewController.m; sourceTree = "<group>"; };
+		27C602BB1887A50B001DFE60 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		27C602BC1887A50B001DFE60 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		27C602BE1888B543001DFE60 /* NutritionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NutritionViewController.h; sourceTree = "<group>"; };
+		27C602BF1888B543001DFE60 /* NutritionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NutritionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +124,12 @@
 				27C60292188770B9001DFE60 /* AppDelegate.h */,
 				27C60293188770B9001DFE60 /* AppDelegate.m */,
 				27C60295188770B9001DFE60 /* Main.storyboard */,
+				27C602BE1888B543001DFE60 /* NutritionViewController.h */,
+				27C602BF1888B543001DFE60 /* NutritionViewController.m */,
+				27C602BB1887A50B001DFE60 /* MenuViewController.h */,
+				27C602BC1887A50B001DFE60 /* MenuViewController.m */,
+				27C602B81887738A001DFE60 /* DiningHallViewController.h */,
+				27C602B91887738A001DFE60 /* DiningHallViewController.m */,
 				27C60298188770B9001DFE60 /* ViewController.h */,
 				27C60299188770B9001DFE60 /* ViewController.m */,
 				27C6029B188770BA001DFE60 /* Images.xcassets */,
@@ -199,6 +214,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Andy;
 				TargetAttributes = {
+					27C6027F188770B9001DFE60 = {
+						DevelopmentTeam = 6H67Z8XZ67;
+					};
 					27C602A0188770BA001DFE60 = {
 						TestTargetID = 27C6027F188770B9001DFE60;
 					};
@@ -250,8 +268,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				27C6029A188770B9001DFE60 /* ViewController.m in Sources */,
+				27C602C01888B543001DFE60 /* NutritionViewController.m in Sources */,
 				27C60294188770B9001DFE60 /* AppDelegate.m in Sources */,
+				27C602BA1887738A001DFE60 /* DiningHallViewController.m in Sources */,
 				27C60290188770B9001DFE60 /* main.m in Sources */,
+				27C602BD1887A50B001DFE60 /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,10 +399,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CUDiningView/CUDiningView-Prefix.pch";
 				INFOPLIST_FILE = "CUDiningView/CUDiningView-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -391,10 +415,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CUDiningView/CUDiningView-Prefix.pch";
 				INFOPLIST_FILE = "CUDiningView/CUDiningView-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

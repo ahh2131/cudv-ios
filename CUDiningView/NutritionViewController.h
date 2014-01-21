@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DiningHallViewController.h"
 
-@interface NutritionViewController : UITableViewController
+
+@interface NutritionViewController : DiningHallViewController
+
+@property (nonatomic, strong) NSMutableString *url;
+@property (nonatomic, assign) NSString *foodId;
+
 
 @end

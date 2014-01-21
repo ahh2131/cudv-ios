@@ -8,6 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DiningHallViewController : UITableViewController
+@interface DiningHallViewController : UITableViewController {
+    //DetailViewController *detailViewController;
+    NSXMLParser *rssParser;
+    NSMutableArray *articles;
+    NSMutableDictionary *item;
+    NSString *currentElement;
+    NSMutableString *ElementValue;
+    BOOL errorParsing;
+}
+//@property (nonatomic, retain) IBOutlet DetailViewController *detailViewController;
+
+
+- (void)parseXMLFileAtURL:(NSString *)URL;
+
+
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "MenuViewController.h"
+#import "NutritionViewController.h"
 
 @interface MenuViewController ()
 
@@ -26,7 +27,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    if (self.hallNumber == 0) {
+        [self parseXMLFileAtURL:@"http://andy.cudiningview.com/foods.php?hall=JAY"];
+    }
+    else if (self.hallNumber == 1){
+        [self parseXMLFileAtURL:@"http://andy.cudiningview.com/foods.php?hall=FER"];
+    }
+    else {
+        [self parseXMLFileAtURL:@"http://andy.cudiningview.com/foods.php?hall=JJP"];
+    }
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -44,24 +53,32 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return articles.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"FoodCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    cell.textLabel.text = [articles[indexPath.row] valueForKey:@"name"];
+    dispatch_async(dispatch_get_global_queue(0,0), ^{
+        NSData * data = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: [articles[indexPath.row] valueForKey:@"url"]]];
+        if ( data == nil )
+            return;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // WARNING: is the cell still using the same data by this point??
+            cell.imageView.image = [UIImage imageWithData: data];
+        });
+    });
     
     return cell;
 }
@@ -105,7 +122,7 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
@@ -113,8 +130,15 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    NutritionViewController *vc = segue.destinationViewController;
+    // note that "sender" will be the tableView cell that was selected
+    UITableViewCell *cell = (UITableViewCell*)sender;
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    vc.foodId = [articles[indexPath.row] valueForKey:@"id"];
+    
+    
 }
 
- */
+
 
 @end

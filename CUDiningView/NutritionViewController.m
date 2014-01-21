@@ -19,6 +19,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        
     }
     return self;
 }
@@ -26,6 +27,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.url = [[NSMutableString alloc] init];
+    
+    [self.url setString:@"http://andy.cudiningview.com/nutrition.php?id="];
+    [self.url appendString:self.foodId];
+    [self parseXMLFileAtURL:self.url];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -44,26 +51,57 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return 9;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"NutritionCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    NSString *nutrient = [[NSString alloc] init];
+    if (indexPath.row == 0) {
+        nutrient = @"ServingSize";
+        cell.detailTextLabel.text = @"Serving Size";
+    } else if (indexPath.row == 1) {
+        nutrient = @"Calories";
+        cell.detailTextLabel.text = @"Calories";
+    } else if (indexPath.row == 2) {
+        nutrient = @"TotalFat";
+        cell.detailTextLabel.text = @"Total Fat";
+    } else if (indexPath.row == 3) {
+        nutrient = @"Cholesterol";
+        cell.detailTextLabel.text = @"Cholesterol";
+    } else if (indexPath.row == 4) {
+        nutrient = @"SaturatedFat";
+        cell.detailTextLabel.text = @"Saturated Fat";
+    } else if (indexPath.row == 5) {
+        nutrient = @"Protein";
+        cell.detailTextLabel.text = @"Protein";
+    } else if (indexPath.row == 6) {
+        nutrient = @"Carbohydrate";
+        cell.detailTextLabel.text = @"Carbohydrate";
+    } else if (indexPath.row == 7) {
+        nutrient = @"Fiber";
+        cell.detailTextLabel.text = @"Fiber";
+    } else if (indexPath.row == 8) {
+        nutrient = @"Sodium";
+        cell.detailTextLabel.text = @"Sodium";
+    }
+    cell.textLabel.text = [articles[0] valueForKey:nutrient];
+    cell.textLabel.textAlignment=UITextAlignmentRight;
+
     
     return cell;
+    
 }
 
 /*
