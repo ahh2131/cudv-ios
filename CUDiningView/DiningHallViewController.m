@@ -111,7 +111,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self parseXMLFileAtURL:@"http://andy.cudiningview.com/halls.xml"];
+    [self parseXMLFileAtURL:@"http://andy.cudiningview.com/halls.php"];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -147,6 +147,8 @@
     
     // Configure the cell...
     cell.textLabel.text = [articles[indexPath.row] valueForKey:@"hall"];
+    cell.detailTextLabel.text = [articles[indexPath.row] valueForKey:@"occupancy"];
+
     
     return cell;
 }

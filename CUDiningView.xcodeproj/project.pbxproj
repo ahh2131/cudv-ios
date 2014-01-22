@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2798C626188F71B6007BF8D5 /* cudviphone.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2798C625188F71B6007BF8D5 /* cudviphone.jpeg */; };
 		27C60284188770B9001DFE60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C60283188770B9001DFE60 /* Foundation.framework */; };
 		27C60286188770B9001DFE60 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C60285188770B9001DFE60 /* CoreGraphics.framework */; };
 		27C60288188770B9001DFE60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C60287188770B9001DFE60 /* UIKit.framework */; };
@@ -14,7 +15,6 @@
 		27C60290188770B9001DFE60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C6028F188770B9001DFE60 /* main.m */; };
 		27C60294188770B9001DFE60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C60293188770B9001DFE60 /* AppDelegate.m */; };
 		27C60297188770B9001DFE60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C60295188770B9001DFE60 /* Main.storyboard */; };
-		27C6029A188770B9001DFE60 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C60299188770B9001DFE60 /* ViewController.m */; };
 		27C6029C188770BA001DFE60 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27C6029B188770BA001DFE60 /* Images.xcassets */; };
 		27C602A3188770BA001DFE60 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C602A2188770BA001DFE60 /* XCTest.framework */; };
 		27C602A4188770BA001DFE60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C60283188770B9001DFE60 /* Foundation.framework */; };
@@ -37,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2798C625188F71B6007BF8D5 /* cudviphone.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cudviphone.jpeg; path = ../../../Downloads/cudviphone.jpeg; sourceTree = "<group>"; };
 		27C60280188770B9001DFE60 /* CUDiningView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CUDiningView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C60283188770B9001DFE60 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		27C60285188770B9001DFE60 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,8 +49,6 @@
 		27C60292188770B9001DFE60 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		27C60293188770B9001DFE60 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		27C60296188770B9001DFE60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		27C60298188770B9001DFE60 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		27C60299188770B9001DFE60 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		27C6029B188770BA001DFE60 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		27C602A1188770BA001DFE60 /* CUDiningViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CUDiningViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C602A2188770BA001DFE60 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -130,9 +129,8 @@
 				27C602BC1887A50B001DFE60 /* MenuViewController.m */,
 				27C602B81887738A001DFE60 /* DiningHallViewController.h */,
 				27C602B91887738A001DFE60 /* DiningHallViewController.m */,
-				27C60298188770B9001DFE60 /* ViewController.h */,
-				27C60299188770B9001DFE60 /* ViewController.m */,
 				27C6029B188770BA001DFE60 /* Images.xcassets */,
+				2798C625188F71B6007BF8D5 /* cudviphone.jpeg */,
 				27C6028A188770B9001DFE60 /* Supporting Files */,
 			);
 			path = CUDiningView;
@@ -246,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2798C626188F71B6007BF8D5 /* cudviphone.jpeg in Resources */,
 				27C6029C188770BA001DFE60 /* Images.xcassets in Resources */,
 				27C6028E188770B9001DFE60 /* InfoPlist.strings in Resources */,
 				27C60297188770B9001DFE60 /* Main.storyboard in Resources */,
@@ -267,7 +266,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27C6029A188770B9001DFE60 /* ViewController.m in Sources */,
 				27C602C01888B543001DFE60 /* NutritionViewController.m in Sources */,
 				27C60294188770B9001DFE60 /* AppDelegate.m in Sources */,
 				27C602BA1887738A001DFE60 /* DiningHallViewController.m in Sources */,
@@ -487,6 +485,7 @@
 				27C602B4188770BA001DFE60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27C602B5188770BA001DFE60 /* Build configuration list for PBXNativeTarget "CUDiningViewTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +494,7 @@
 				27C602B7188770BA001DFE60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
